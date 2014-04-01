@@ -1,0 +1,26 @@
+{
+  "name": "translate-cmd",
+  "version": "0.0.0",
+  "description": "cmd id 提取工具",
+  "main": "translate-cmd.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nateyang/translate-cmd"
+  },
+  "keywords": [
+    "cmd",
+    "id",
+    "提取"
+  ],
+  "devDependencies": {
+    "annotation": "~0.0.0"
+  },
+  "author": "nateyang",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/nateyang/translate-cmd/issues"
+  }
+}

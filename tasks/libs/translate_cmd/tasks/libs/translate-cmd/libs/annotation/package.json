@@ -1,0 +1,18 @@
+{
+  "name": "annotation",
+  "version": "0.0.0",
+  "description": "注释去除工具",
+  "main": "annotation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nateyang/annotation"
+  },
+  "keywords": [
+    "注释去除，注释恢复"
+  ],
+  "author": "nateyang",
+  "license": "BSD"
+}

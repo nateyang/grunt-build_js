@@ -1,0 +1,14 @@
+*.o
+*.lo
+*.la
+*.al
+.libs
+*.so
+*.so.[0-9]*
+*.a
+*.pyc
+*.pyo
+*.swp
+node_modules
+npm-debug.log
+test/dest
