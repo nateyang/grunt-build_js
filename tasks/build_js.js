@@ -83,7 +83,7 @@ module.exports = function(grunt) {
       var uglifyFiles = [{
         src: concatFiles,
         dest: concatFiles
-      }]
+      }].concat(onlyUglifyFiles);
     } else {
       if (options.cmd) {
         var uglifyFiles = onlyUglifyFiles;
