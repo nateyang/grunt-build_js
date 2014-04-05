@@ -74,7 +74,13 @@ module.exports = function(filePath,targetFilePath,webRoot,removeAnnotation,encod
   var string = fs.readFileSync(filePath,{
     encoding: encoding
   });
-  var newStr = extract(string,'/' + path.relative(webRoot,filePath),removeAnnotation);
+  if (!webRoot) {
+    var fileNameIndex = filePath.lastIndexOf('/');
+    filePath = filePath.substring(fileNameIndex + 1);
+    var newStr = extract(string,filePath,removeAnnotation);
+  } else {
+    var newStr = extract(string,'/' + path.relative(webRoot,filePath),removeAnnotation);
+  }
   // 如果没有目标目录，开始创建
   var directories = path.relative('./',targetFilePath).split('/');
   var directory = '';

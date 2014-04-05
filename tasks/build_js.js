@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 
     var options = this.options({
       // web根目录
-      root: './',
+      root: '',
       // cmd是否进行cmd转换
       cmd: true,
       // concat是否合并文件
@@ -116,7 +116,7 @@ module.exports = function(grunt) {
     }
     grunt.config.data.uglify = uglify_config;
     taskQueue.push('uglify:' + this.target);
-    if (options.cmd && options.clean) {
+    if (options.cmd && options.concat && options.clean) {
       grunt.config.data.clean = clean_config;
       taskQueue.push('clean:' + this.target);
     }

@@ -17,9 +17,6 @@ module.exports = function(grunt) {
 
     translate_cmd: {
       default_options: {
-        options: {
-          root: './'
-        },
         files: [{
           expand: true,
           cwd: 'test/src/',

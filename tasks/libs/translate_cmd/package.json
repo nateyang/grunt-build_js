@@ -2,7 +2,7 @@
   "name": "grunt-translate_cmd",
   "main": "tasks/translate_cmd.js",
   "description": "grunt cmd id提取工具",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "homepage": "https://github.com/nateyang/grunt-translate_cmd",
   "author": {
     "name": "nateyang",
@@ -39,6 +39,6 @@
   ],
   "readme": "<h1>grunt-translate_cmd</h1>\n<p>提取cmd id</p>\n<h3>options.root</h3>\n<p>web项目的根目录</p>\n<h3>options.removeAnnomation</h3>\n<p>是否移除注释</p>\n",
   "readmeFilename": "README.md",
-  "_id": "grunt-translate_cmd@0.1.7",
+  "_id": "grunt-translate_cmd@0.1.8",
   "_from": "grunt-translate_cmd@"
 }

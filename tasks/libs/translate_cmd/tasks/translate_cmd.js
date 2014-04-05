@@ -17,7 +17,7 @@ module.exports = function(grunt) {
   grunt.registerMultiTask('translate_cmd', 'The best Grunt plugin ever.', function() {
     var options = this.options({
       // 静态资源根目录，为了获取模块绝对路径
-      root: './',
+      root: '',
       removeAnnomation: false,
       encoding: 'utf-8'
     });
