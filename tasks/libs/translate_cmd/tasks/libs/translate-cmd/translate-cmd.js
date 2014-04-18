@@ -66,10 +66,11 @@ function extract(str,path,remove) {
  * @param filePath {string} 要处理的文件路径
  * @param targetFilePath {string} 处理后的文件路径
  * @param webRoot {string} web项目根目录
+ * @param useConfig {boolean} 是否使用seajs的config的base来设置目录,如果设置的话,id应该没有/前缀
  * @param removeAnnotation {boolean} 是否移除掉注释
  * @param encoding {string} 字符类型
  */
-module.exports = function(filePath,targetFilePath,webRoot,removeAnnotation,encoding) {
+module.exports = function(filePath,targetFilePath,webRoot,useConfig,removeAnnotation,encoding) {
   encoding = encoding || 'utf-8';
   var string = fs.readFileSync(filePath,{
     encoding: encoding
@@ -79,7 +80,7 @@ module.exports = function(filePath,targetFilePath,webRoot,removeAnnotation,encod
     filePath = filePath.substring(fileNameIndex + 1);
     var newStr = extract(string,filePath,removeAnnotation);
   } else {
-    var newStr = extract(string,'/' + path.relative(webRoot,filePath),removeAnnotation);
+    var newStr = extract(string,(useConfig ? '' : '/') + path.relative(webRoot,filePath),removeAnnotation);
   }
   // 如果没有目标目录，开始创建
   var directories = path.relative('./',targetFilePath).split('/');

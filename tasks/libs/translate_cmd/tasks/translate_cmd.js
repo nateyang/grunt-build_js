@@ -18,6 +18,7 @@ module.exports = function(grunt) {
     var options = this.options({
       // 静态资源根目录，为了获取模块绝对路径
       root: '',
+      useConfig: false,
       removeAnnomation: false,
       encoding: 'utf-8'
     });
@@ -30,7 +31,7 @@ module.exports = function(grunt) {
     files.forEach(function (fileInfo) {
       var filepath = fileInfo.src[0];
       var targetFilePath = fileInfo.dest;
-      translate(filepath,targetFilePath,options.root,options.removeAnnomation,options.encoding);
+      translate(filepath,targetFilePath,options.root,options.useConfig,options.removeAnnomation,options.encoding);
     });
   });
 
